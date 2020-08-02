@@ -1,0 +1,121 @@
+// ==============
+// Theme settings
+// ==============
+
+#kite-settings {
+    position: fixed;
+    bottom: 25px; right: 25px;
+    z-index: 999;
+
+    // Menu
+
+    &__menu {
+        top: auto; bottom: ~"calc(100% + 25px)"; left: auto; right: 0;
+        min-width: @sidebar-width;
+        padding: 25px;
+        
+        // Heading 
+
+        > h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        // List
+
+        > ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            .clearfix();
+
+            > li {
+                float: left;
+                width: 20%;
+                margin-bottom: 10px;
+
+                > a {
+                    display: block;
+                    width: 25px; height: 25px;
+                    border-radius: 50%;
+                    background-color: @grey-lighter;
+
+                    &.brand-red {
+                        background-color: @brand-red-500;
+                    }
+                    &.brand-pink {
+                        background-color: @brand-pink-500;
+                    }
+                    &.brand-purple {
+                        background-color: @brand-purple-500;
+                    }
+                    &.brand-deep-purple {
+                        background-color: @brand-deep-purple-500;
+                    }
+                    &.brand-indigo {
+                        background-color: @brand-indigo-500;
+                    }
+                    &.brand-blue {
+                        background-color: @brand-blue-500;
+                    }
+                    &.brand-light-blue {
+                        background-color: @brand-light-blue-500;
+                    }
+                    &.brand-cyan {
+                        background-color: @brand-cyan-500;
+                    }
+                    &.brand-teal {
+                        background-color: @brand-teal-500;
+                    }
+                    &.brand-green {
+                        background-color: @brand-green-500;
+                    }
+                    &.brand-light-green {
+                        background-color: @brand-light-green-500;
+                    }
+                    &.brand-lime {
+                        background-color: @brand-lime-500;
+                    }
+                    &.brand-yellow {
+                        background-color: @brand-yellow-500;
+                    }
+                    &.brand-amber {
+                        background-color: @brand-amber-500;
+                    }
+                    &.brand-orange {
+                        background-color: @brand-orange-500;
+                    }
+                    &.brand-deep-orange {
+                        background-color: @brand-deep-orange-500;
+                    }
+                    &.brand-brown {
+                        background-color: @brand-brown-500;
+                    }
+                    &.brand-grey {
+                        background-color: @brand-grey-500;
+                    }
+                    &.brand-blue-grey {
+                        background-color: @brand-blue-grey-500;
+                    }
+                    &.brand-original {
+                        background-color: @brand-original-500;
+                    }
+                }
+
+                &.active {
+
+                    > a {
+                        border: 5px solid fade(white,70%);
+                    }
+                }
+            }
+        }
+    }
+
+    // Collapsed
+
+    &.active {
+        transform: translateX(0);
+    }
+}

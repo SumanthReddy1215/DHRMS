@@ -1,0 +1,39 @@
+﻿@using DHRM.BusinessEntity;
+@using NonFactors.Mvc.Grid;
+@model SearchResultCriteria<UserInfoEntity>
+
+@*<div class="row">
+        <div class="col-sm-4">User Name:</div>
+        <div class="col-sm-8"> &nbsp;</div>
+        <div class="col-sm-4">Email:</div>
+        <div class="col-sm-8"> &nbsp;</div>
+        <div class="col-sm-4">Status:</div>
+        <div class="col-sm-8"> &nbsp;</div>
+    </div>*@
+
+ @*@(Html.Grid<DHRM.BusinessEntity.UserInfoEntity>(Model.List)
+    .Build(columns =>
+    {
+        columns.Add(model => model.MEM_ID).Titled("ADMIN ID").RenderedAs(model => model.MEM_ID.ToString("00000"));
+        columns.Add(model => model.MEM_UserName).Titled("USER NAME");
+        columns.Add(model => model.MEM_Email).Titled("EMAIL ID");
+        //columns.Add(model => model).Titled("Created Date").RenderedAs(model => model.CreatedDate.ToString("MM/dd/yyyy"));
+        columns.Add(model => model.MEM_IsActive).Titled("Status");
+        columns.Add(model => model.RoleName).Titled("Role Name");
+        columns.Add(model => model).Titled("Actions").Encoded(false)
+                .RenderedAs(model =>
+                string.Format("<button type='button' title='Request For Approval' class='btn btn-primary btn-xs'><i class='fa fa-list' aria-hidden='true'></i></button>&nbsp;<button type='button' onclick='{0}' title='Edit' class='btn btn-primary btn-xs'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>&nbsp;<button type='button' title='Delete' class='btn btn-primary btn-xs'><i class='fa fa-trash' aria-hidden='true'></i></button>",
+                    string.Format(@"openContractPage(""{0}"",{1})", model.MEM_UserName, model.MEM_ID)
+                )
+            ).Css("mvc-grid-text-align-center grid-width-120");
+
+    })
+    .Named("grid-contrat")
+    //.Pageable(pager =>
+    //{
+    //    pager.ProcessorType = GridProcessorType.Manual;
+    //    pager.TotalRows = Model.TotalRows;
+    //    pager.RowsPerPage = Model.RowsPerPage;
+    //})
+    .Empty(Model.NoRecordsFoundText)*@
+)

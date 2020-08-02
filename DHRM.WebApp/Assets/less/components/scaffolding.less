@@ -1,0 +1,121 @@
+// ===========
+// Scaffolding
+// ===========
+
+@body-bg: #f0f0f0;
+
+
+// General styles
+// ==============
+
+body {
+	overflow-x: hidden;
+	
+	// Prevent .wrapper and .sidebar transition on page load in IE
+	
+	&:not(.body_loaded) {
+
+		.wrapper, .sidebar {
+			transition: none !important;
+		}
+	}
+}
+
+
+// Wrapper
+// =======
+
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding-left: @sidebar-width;
+	transition-property: padding;
+	transition-duration: .4s;
+  	transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  	transform: translateZ(0,0,0);
+
+	@media(max-width: @screen-sm-max) {
+		position: static;
+		padding-left: 0;
+	}
+
+	.sidebar {
+		display: block;
+		position: absolute;
+		top: 0; left: 0;
+		width: @sidebar-width; height: 100%;
+		z-index: 100;
+		transition-property: -webkit-transform, transform;
+		transition-duration: .4s;
+		transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+		@media(max-width: @screen-sm-max) {
+			position: fixed;
+  			-webkit-transform: translateX(-@sidebar-width);
+  					transform: translateX(-@sidebar-width);	
+		}
+	}
+  	&.alt {
+  		padding-left: 0;
+
+  		.sidebar {
+  			-webkit-transform: translateX(-@sidebar-width);
+  					transform: translateX(-@sidebar-width);
+  		}
+
+  		@media(max-width: @screen-sm-max) {
+  			max-height: 100vh;
+  			overflow: hidden;
+			
+			.sidebar {
+	  			-webkit-transform: translateX(0);
+	  					transform: translateX(0);
+			}
+  		}
+  	}
+  	.container-fluid {
+  		padding-left: @grid-gutter-width * .75;
+  		padding-right: @grid-gutter-width * .75;
+
+  		> .row {
+
+  			[class*="col-"] {
+  				padding-left: @grid-gutter-width * .25;
+  				padding-right: @grid-gutter-width * .25;
+
+  				> .row {
+  					padding-left: @grid-gutter-width * .25;
+  					padding-right: @grid-gutter-width * .25;
+  				}
+  			}
+  		}
+  	}
+}
+
+// Row: justified
+// ===========
+
+.row-justified {
+
+	@media(min-width: @screen-lg-min) {
+		display: flex;
+		align-items: stretch;
+
+		> [class*="col-"] {
+
+			> .panel {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				height: ~"calc(100% - 15px)";
+
+				> .panel-heading, > .panel-body, > .list-group, > .panel-footer {
+					width: 100%;
+				}
+				> .panel-footer {
+					margin-top: auto;
+				}
+			}
+		}
+	}
+}

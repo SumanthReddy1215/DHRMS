@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHRM_COREModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DepID" />
+    </Key>
+    <Property Name="DepID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="150" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TemplateBody" Type="varchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreatedIP" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDateTime" Type="datetime" />
+    <Property Name="ModifiedIP" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="ROLE">
+    <Key>
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="ROLEID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="100" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="USERADMIN">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UNAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="PWD" Type="nvarchar" MaxLength="60" />
+    <Property Name="EMAILID" Type="nvarchar" MaxLength="150" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DHRM_CORE.dbo.USERROLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="USERROLE">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+      <PropertyRef Name="ROLEID" />
+      <PropertyRef Name="DepID" />
+    </Key>
+    <Property Name="ADMINID" Type="bigint" Nullable="false" />
+    <Property Name="ROLEID" Type="bigint" Nullable="false" />
+    <Property Name="DepID" Type="bigint" Nullable="false" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DHRM_CORE.dbo.VW_GetUserInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_GetUserInfo">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="bigint" Nullable="false" />
+    <Property Name="UNAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="PWD" Type="nvarchar" MaxLength="60" />
+    <Property Name="EMAILID" Type="nvarchar" MaxLength="150" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_USERROLE_DEPARTMENT">
+    <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="1" />
+    <End Role="USERROLE" Type="Self.USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTMENT">
+        <PropertyRef Name="DepID" />
+      </Principal>
+      <Dependent Role="USERROLE">
+        <PropertyRef Name="DepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERROLE_ROLE">
+    <End Role="ROLE" Type="Self.ROLE" Multiplicity="1" />
+    <End Role="USERROLE" Type="Self.USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLE">
+        <PropertyRef Name="ROLEID" />
+      </Principal>
+      <Dependent Role="USERROLE">
+        <PropertyRef Name="ROLEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERROLE_USERADMIN">
+    <End Role="USERADMIN" Type="Self.USERADMIN" Multiplicity="1" />
+    <End Role="USERROLE" Type="Self.USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERADMIN">
+        <PropertyRef Name="ADMINID" />
+      </Principal>
+      <Dependent Role="USERROLE">
+        <PropertyRef Name="ADMINID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="USP_GETUSERINFO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DHRM_COREModelStoreContainer">
+    <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailTemplate" EntityType="Self.EmailTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLE" EntityType="Self.ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERADMIN" EntityType="Self.USERADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERROLE" EntityType="Self.USERROLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [USERROLE].[ADMINID] AS [ADMINID], 
+    [USERROLE].[ROLEID] AS [ROLEID], 
+    [USERROLE].[DepID] AS [DepID], 
+    [USERROLE].[STATUS] AS [STATUS]
+    FROM [dbo].[USERROLE] AS [USERROLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_GetUserInfo" EntityType="Self.VW_GetUserInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_GetUserInfo].[ADMINID] AS [ADMINID], 
+    [VW_GetUserInfo].[UNAME] AS [UNAME], 
+    [VW_GetUserInfo].[PWD] AS [PWD], 
+    [VW_GetUserInfo].[EMAILID] AS [EMAILID], 
+    [VW_GetUserInfo].[STATUS] AS [STATUS], 
+    [VW_GetUserInfo].[RoleName] AS [RoleName]
+    FROM [dbo].[VW_GetUserInfo] AS [VW_GetUserInfo]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_USERROLE_DEPARTMENT" Association="Self.FK_USERROLE_DEPARTMENT">
+      <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+      <End Role="USERROLE" EntitySet="USERROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERROLE_ROLE" Association="Self.FK_USERROLE_ROLE">
+      <End Role="ROLE" EntitySet="ROLE" />
+      <End Role="USERROLE" EntitySet="USERROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERROLE_USERADMIN" Association="Self.FK_USERROLE_USERADMIN">
+      <End Role="USERADMIN" EntitySet="USERADMIN" />
+      <End Role="USERROLE" EntitySet="USERROLE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

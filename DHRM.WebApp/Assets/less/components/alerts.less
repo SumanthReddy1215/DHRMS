@@ -1,0 +1,40 @@
+/**
+ * Alerts
+ */
+
+@alert-border-radius: 0px;
+
+.alert {
+	position: relative;
+	padding: 25px;
+	border-width: 0;
+	border-left: 3px solid @brand-info;
+	background-color: white;
+	color: @text-color;
+	box-shadow: 0 1px 3px fade(black,12%), 0 1px 2px fade(black,24%);
+
+	[data-dismiss] {
+		position: absolute;
+		top: 10px; right: 10px;
+	}
+}
+
+// Contextual classes
+
+.alert(@color) {
+	border-color: @color;
+	background-color: tint(@color,75%);
+	color: shade(@color,50%);
+}
+.alert-success {
+	.alert(@brand-success);
+}
+.alert-info {
+	.alert(@brand-info);
+}
+.alert-warning {
+	.alert(@brand-warning);
+}
+.alert-danger {
+	.alert(@brand-danger);
+}

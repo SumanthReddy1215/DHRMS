@@ -1,0 +1,33 @@
+// =============
+// Progress bars
+// =============
+
+@progress-bg: @grey-lighter;
+@progress-border-radius: 0;
+
+.progress {
+	box-shadow: none;
+	height: 4px;
+
+	&.progress-primary {
+		background: tint(@brand-primary,75%);
+	}
+	&.progress-success {
+		background: tint(@brand-success,75%);
+	}
+	&.progress-info {
+		background: tint(@brand-info,75%);
+	}
+	&.progress-warning {
+		background: tint(@brand-warning,75%);
+	}
+	&.progress-danger {
+		background: tint(@brand-danger,75%);
+	}
+}
+.progress-bar {
+	box-shadow: none;
+}
+.progress-title {
+	color: @text-muted;
+}

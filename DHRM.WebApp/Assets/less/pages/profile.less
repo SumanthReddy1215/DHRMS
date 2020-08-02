@@ -1,0 +1,101 @@
+/**
+ * Profile
+ */
+
+
+/*** Profile: Header  ***/
+
+.profile__avatar {
+	float: left;
+	width: 60px; height: 60px;
+	border-radius: 50%;
+	margin-right: 20px;
+	overflow: hidden;
+
+	@media(min-width: @screen-sm-min) {
+		width: 100px; height: 100px;
+	}
+
+	> img {
+		width: 100%; height: auto;
+	}
+}
+.profile__header {
+	overflow: hidden;
+
+	p {
+		margin: 20px 0;
+	}
+}
+
+
+/*** Profile: Table ***/
+
+@media(min-width: @screen-md-min) {
+
+	.profile__table {
+
+		tbody {
+
+			th {
+				width: 200px;
+			}
+		}
+	}
+}
+
+/*** Profile: Contact ***/
+
+.profile__contact-btn {
+	padding: 12px 20px;
+	margin-bottom: 20px;
+}
+.profile__contact-hr {
+	position: relative;
+	border-color: fade(black,10%);
+	margin: 40px 0;
+
+	&:before {
+		content: "OR";
+		display: block;
+		padding: 10px;
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #ddd;
+		border-radius: @border-radius-base;
+		outline: 10px solid @body-bg;
+		color: @text-muted;
+		font-size: @font-size-small;
+		font-weight: 500;
+	}
+}
+.profile__contact-info-item {
+	margin-bottom: 30px;
+	.clearfix();
+}
+.profile__contact-info-icon {
+	float: left;
+	font-size: 18px;
+	color: @text-muted;
+}
+.profile__contact-info-body {
+	overflow: hidden;
+	padding-left: 20px;
+	color: @text-muted;
+
+	a {
+		color: @text-muted;
+
+		&:hover, &:focus {
+			color: @text-muted;
+			text-decoration: none;
+		}
+	}
+}
+.profile__contact-info-heading {
+	margin-top: 2px;
+	margin-bottom: 5px;
+	font-weight: 500;
+	color: @text-muted;
+}

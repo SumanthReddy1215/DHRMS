@@ -1,0 +1,55 @@
+﻿@model DHRM.BusinessEntity.DocumentInfoEntity
+<div class="row">
+    <div class="col-sm-4">Document Code:</div>
+    <div class="col-sm-8">@Model.DocCode &nbsp;</div>
+    <div class="col-sm-4">Document Type:</div>
+    <div class="col-sm-8">@Model.DocType &nbsp;</div>
+    <div class="col-sm-4">Document Name:</div>
+    <div class="col-sm-8">@Model.DocName &nbsp;</div>
+    <div class="col-sm-4">FileTypes:</div>
+    <div class="col-sm-8">@Model.FileTypes &nbsp;</div>
+    <div class="col-sm-4">MaxFileSize:</div>
+    <div class="col-sm-8">@Model.MaxFileSize &nbsp;</div>
+    <div class="col-sm-4">IsRequired:</div>
+    <div class="col-sm-8">@Model.IsRequired &nbsp;</div>
+</div>
+@*@using DHRM.BusinessEntity;
+    @(Html.Grid<dhrm.businessentity.documentinfoentity>(Model)
+        .Build(columns =>
+        {
+            columns.Add(model => model.DocCode).Titled("Document Code");
+            columns.Add(model => model.DocType).Titled("Document Type");
+            
+            columns.Add(model => model.DocName).Titled("Document Name");
+            columns.Add(model => model.FileTypes).Titled("FileTypes");
+            columns.Add(model => model.MaxFileSize).Titled("MaxFileSize");
+            columns.Add(model => model.IsRequired).Titled("IsRequired");
+        })
+        .Named("grid-contrat")
+        .Empty(Model.NoRecordsFoundText)
+    )
+
+    <script type="text/javascript">
+        function openContractPage(leadType, mid, cid) {
+            // lead contract
+            if (leadType.toLowerCase() == "leads contract") {
+                processDialog.show();
+                window.location.href = '@Url.Action("Index","LeadContract")?mid=' + mid + '&cid=' + cid + '&type=1';
+            }
+            if (leadType.toLowerCase() == "listing contract") {
+                processDialog.show();
+                window.location.href = '@Url.Action("Index","LeadContract")?mid=' + mid + '&cid=' + cid + '&type=2';
+            }
+            else if (leadType.toLowerCase() == "website contract") {
+                processDialog.show();
+                window.location.href = '@Url.Action("Index", "WebsiteContract")?mid=' + mid + '&cid=' + cid;
+            }
+
+            // add few more condions for other contrats
+        }
+    </script>*@
+
+
+
+
+

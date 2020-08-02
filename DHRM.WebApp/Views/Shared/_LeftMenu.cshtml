@@ -1,0 +1,38 @@
+﻿
+<nav id="sidebar__nav">
+    <!-- Loaded from /sidebar.json -->
+    <ul class="sidebar__nav">
+        <li>
+            <a href="@Url.Action("Index","Dashboard")" id="menu-dashboard"><i class="fa fa-home"></i>Dashboard</a>
+        </li>
+        <li class="sidebar-nav__dropdown">
+            <a id="menu-admin" href="#sidebar-nav__dropdown_admin" role="button" data-toggle="collapse" aria-expanded="false" 
+               aria-controls="sidebar-nav__dropdown_admin" class="collapsed"><i class="fa fa-user-circle"></i> Admin</a>
+            <ul class="sidebar-nav__submenu collapse" id="sidebar-nav__dropdown_admin" aria-expanded="false">
+                <li>
+                    <a href="@Url.Action("Index","CompanyRegister")" id="menu-verdorapprovals"><i class="fa fa-arrow-circle-right"></i> Company Registration</a>
+                    <a href="@Url.Action("Index", "Document")" id="menu-verdorapprovals"><i class="fa fa-arrow-circle-right"></i> Document Master </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="sidebar-nav__dropdown">
+            <a id="menu-lead" href="#sidebar-nav__dropdown_lead" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebar-nav__dropdown_lead" class="collapsed"><i class="fa fa-leaf"></i> Employee</a>
+            <ul class="sidebar-nav__submenu collapse" id="sidebar-nav__dropdown_lead" aria-expanded="false">
+                <li>
+                    <a href="@Url.Action("xxxx","xxxx",new { TabName="LL" })" id="menu-createlead"><i class="fa fa-arrow-circle-right"></i> xxxx</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("xxxx","xxx")" id="menu-leadsearch"><i class="fa fa-arrow-circle-right"></i>xxxx</a>
+                </li>
+                <li>
+                    <a href="#" id="menu-createlead"><i class="fa fa-arrow-circle-right"></i> xxxx</a>
+                </li>
+            </ul>
+        </li>
+
+       
+
+    </ul>
+    <br />
+</nav>

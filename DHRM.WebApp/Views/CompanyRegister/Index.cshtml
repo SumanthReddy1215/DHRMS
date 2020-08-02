@@ -1,0 +1,359 @@
+﻿@{
+    ViewBag.Title = "CompanyRegister";
+    Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+@model DHRM.BusinessEntity.CompanyRegisterEntity
+
+<h1 class="page-header" active-menu="#lead_reports" active-submenu="#menu-leadreport">Company Registration</h1>
+
+<style>
+    .id_tancopy1 {
+        display: block !important;
+        background-color: black;
+    }
+</style>
+
+<form id="frmCompanyRegister" data-parsley-validate>
+    @*<div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="row form-group">
+                            @Html.Partial("_CompanyDetails", Model)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            <label>Company Type:<em>*</em></label>
+                            <select id="ID_CompanyType" required="" class="form-control"></select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Company Name:<em>*</em></label>
+                            <input class="form-control" id="id_CompanyName" type="text" name="Company Name" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Company Logo:<em>*</em></label>
+                            <input type="file" required class="form-control" id="id_logo" />
+                        </div>
+
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-sm-4 ">
+                            <label>Address Line1:<em>*</em></label>
+                            <input class="form-control" id="id_address1" type="text" name="Street address, Plot no, c/o" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Address Line2:</label>
+                            <input type="text" id="id_address2" class="form-control" name="Apartment/Building, Floor, etc." />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>City:<em>*</em></label>
+                            <input type="text" id="id_city" class="form-control" name="City" />
+                        </div>
+
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            <label>State:<em>*</em></label>
+                            <input type="text" id="id_state" class="form-control" name="State" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Country:<em>*</em></label>
+                            <input type="text" id="id_country" class="form-control" name="Country" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Zip/Postal code#:<em>*</em></label>
+                            <input type="text" id="id_zip" class="form-control" name="Zip/Postal code" />
+                        </div>
+
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            <label>Contact Person:<em>*</em></label>
+                            <input type="text" id="id_person" class="form-control" name="Contact Person" />
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <label>Contact Email:<em>*</em></label>
+                            <input type="text" id="id_email" required data-inputmask="'alias':'email'" data-parsley-email="" class="form-control" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Contact Number#:<em>*</em></label>
+                            <input type="text" id="id_contact" class="form-control" name="Contact Number" />
+                        </div>
+                    </div>
+                    @*<div class="row form-group">
+                            <div class="col-sm-3">
+                                <label>Company PAN#:<em>*</em></label>
+                                <input type="text" id="id_pan" class="form-control" name="Company PAN" />
+                            </div>
+                            <div class="col-sm-3">
+                                <label>Company PAN Copy:<em>*</em></label>
+                                <input type="file" required class="form-control" id="id_pancopy" />
+                            </div>
+                            <div class="col-sm-3">
+                                <label>Company TAN#:<em>*</em></label>
+                                <input type="text" id="id_pan" class="form-control" name="Company TAN" />
+                            </div>
+                            <div class="col-sm-3">
+                                <label>Company TAN Copy:<em>*</em></label>
+                                <input type="file" required class="form-control" id="id_tancopy" />
+                            </div>
+
+
+                        </div>*@
+
+                    <div class="row form-group">
+                        <table class="table table-bordered" id="Doctable">
+                            <thead class="thead-light ">
+                                <tr>
+                                    <th>Documnet Name</th>
+                                    <th style="display:none">DocCode</th>
+                                    <th style="display:none">DocType</th>
+                                    <th>MaxFileSize</th>
+                                    <th>IsRequired</th>
+                                    <th style="display:none">FileTypes</th>
+                                    <th>Attachment</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <input type="hidden" id="LeadTypeCode" name="LeadTypeCode" value="" />
+                    <div class="row margin-bottom10 margin-top10">
+                        <div class="col-md-12">
+                            <div style="float:right">
+                                <button onclick="resetForm();" class="btn  btn-gray">
+                                    Clear
+                                </button>&nbsp;
+                                <button class="btn btn-primary" type="button" onclick="btnsubmit()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Search Result</label>
+                        </div>
+                        <div class="col-sm-12 table-responsive">
+                            @*@Html.AjaxGrid(Url.Action("SearchLeadReport"))*@
+                            <table id="tblByDate" class="table table-bordered table-condensed table-responsive table-hover"></table>
+                        </div>
+                    </div>
+                </div> <!-- / .panel-body -->
+
+            </div> <!-- / .panel-footer -->
+
+        </div>
+    </div>
+
+
+</form>
+
+<script type="text/javascript">
+    function btnsubmit() {
+        debugger;
+        var flag = parsleyForms.parsley().validate();
+        if (flag) {
+            var uploadFormData = new FormData();
+            uploadFormData.append('CompanyType', $("#ID_CompanyType").val());
+            uploadFormData.append('CompanyName', $("#id_CompanyName").val());
+            uploadFormData.append("CompanyLogo", $("#id_logo").val());
+            uploadFormData.append('StreetAddress1', $("#id_address1").val());
+            uploadFormData.append("StreetAddress2", $("#id_address2").val());
+            uploadFormData.append('City', $("#id_city").val());
+            uploadFormData.append("StateName", $("#id_state").val());
+            uploadFormData.append('CountryName', $("#id_country").val());
+            uploadFormData.append("ZipCode", $("#id_zip").val());
+            uploadFormData.append('ContactPerson', $("#id_state").val());
+            uploadFormData.append("ContactEmail", $("#id_email").val());
+            uploadFormData.append("ContactPhone", $("#id_contact").val());
+            uploadFormData.append("logo", ($("#id_logo"))[0].files[0]);
+            var obj = {};
+            $("#Doctable >tbody >tr").each(function () {
+                var currentRow = $(this);
+                var fup = currentRow.find("input[type='file']");
+
+                var Attachment = fup[0].files[0];
+                var DocumnetName = currentRow.find("td:eq(0)").text();
+                var DocCode = currentRow.find("td:eq(1)").text();
+                var DocType = currentRow.find("td:eq(2)").text();
+                var docname = DocumnetName + "-" + DocCode + "-" + DocType
+                uploadFormData.append(docname, fup[0].files[0]);
+            });
+            //var CR = {
+            //    CompanyName: $("#id_CompanyName").val(), CompanyLogo: $("#id_logo").val(),
+            //    StreetAddress1: $("#id_address1").val(), StreetAddress2: $("#id_address2").val(), City: $("#id_city").val(),
+            //    StateName: $("#id_state").val(), CountryName: $("#id_country").val(), ZipCode: $("#id_zip").val(),
+            //    ContactPerson: $("#id_person").val(), ContactEmail: $("#id_email").val(), ContactPhone: $("#id_contact").val()
+            //};
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Index", "CompanyRegister")',
+                contentType: false,
+                processData: false,
+                data: uploadFormData,
+                success: function (data) {
+                    debugger;
+                    //$('#id_file').val('');
+                    //$('#id_email').val('');
+                    //$('#image-zoom img').attr("src", data);
+                    alert(data);
+                    //loadGrid();
+                },
+                error: function () {
+
+                }
+
+            });
+        }
+    }
+
+    //function loadGrid() {
+    //    $('.mvc-grid').mvcgrid({
+    //        reload: true
+    //    });
+    //}
+
+    //$(function () {
+    //    loadGrid();
+    //});
+
+    function resetForm() {
+        $('#frmCompanyRegister').trigger('reset');
+        $('#LeadTypeCode').val('');
+    }
+</script>
+
+<script type="text/javascript">
+
+
+
+    // open email window
+    function openEmailWindow(email, moverId) {
+        var data = {
+            email: email, moverId: moverId
+        };
+        $.ajaxPost('@Url.Action("EmailWindow")', data, function (response, status, xhr) {
+            BootstrapDialog.show({
+                title: 'Send Email',
+                closable: false,
+                message: $('<form id="emailWindow"></form>').html(response),
+                buttons: [{
+                    id: 'btn-send',
+                    //icon: 'glyphicon glyphicon-check',
+                    label: 'Send',
+                    cssClass: 'btn-primary',
+                    data: {
+                        email: email,
+                        moverId: moverId
+                    },
+                    action: function (dialogRef, dd) {
+                        var $form = $("#emailWindow");
+                        var flag = $form.parsley().validate();
+                        if (flag) {
+                            sendMail($form.serialize(), dialogRef);
+                        }
+                    }
+                },
+                {
+                    id: 'btn-close',
+                    //icon: 'glyphicon glyphicon-check',
+                    label: 'Close',
+                    action: function (dialogRef) {
+                        dialogRef.close();
+                    }
+                }],
+                onshown: function () {
+                    $("#emailWindow").parsley(ParsleyDefaults);
+                    // var flag = parsleyForms.parsley().validate();
+                }
+            });
+
+        });
+
+        return false;
+    }
+
+    function sendMail(data, dialogRef) {
+        $.ajaxPost('@Url.Action("SendMail")', data, function (response, status, xhr) {
+            if (response) {
+                dialogRef.close();
+            }
+        });
+    }
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        LoadCompanyType();
+
+        $("#ID_CompanyType").change(function () {
+            $.ajax({
+                type: 'POST',
+                url: '../CompanyRegister/GetDocumentTemp',
+                //url: '@Url.Action("GetDocumentTemp")',
+                dataType: 'json',
+                data: { DocType: $("#ID_CompanyType").val() },
+                success: function (Result) {
+                    var tr;
+                    if (Result.length > 0) {
+                        for (var i = 0; i < Result.length; i++) {
+                            tr = $('<tr />');
+                            tr.append("<td>" + Result[i].DocName + "</td>");
+                            tr.append("<td style='display:none'>" + Result[i].DocCode + "</td>");
+                            tr.append("<td style='display:none'>" + Result[i].DocType + "</td>");
+                            tr.append("<td>" + Result[i].MaxFileSize + " (kb)</td>");
+                            var $ctrl = $('<input/>').attr({ type: 'checkbox', name: 'checkbox', checked: Result[i].IsRequired }).css({ display: "block" });
+                            td = $('<td />');
+                            td.append($ctrl)
+                            tr.append(td);
+                            tr.append("<td style='display:none'>" + Result[i].FileTypes + "</td>");
+                            tr.append("<td><input type='file' name='fileToUpload' id='fileToUpload'></td>");
+                            $('#Doctable tbody').append(tr);
+                        }
+                    }
+                    else {
+                        $("#Doctable > tbody").empty();
+                    }
+
+
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve data.' + ex);
+                }
+            });
+            return false;
+        })
+    });
+
+    function LoadCompanyType() {
+        $.ajax({
+            url: '../CompanyRegister/GetCompanyType',
+            type: "POST",
+            data: {
+            },
+            success: function (data) {
+                $("#ID_CompanyType").append("<option value='0'>--Select--</option>");
+                $(data).each(function (i) {
+                    $("#ID_CompanyType").append("<option value='" + data[i].DocType_Code + "'>" + data[i].DocType_Name + "</option>");
+                });
+            },
+            error: function (errorThrown) {
+            }
+        });
+    }
+</script>

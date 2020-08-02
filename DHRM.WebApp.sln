@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHRM.DataAccess", "DHRM.DataAccess\DHRM.DataAccess.csproj", "{4EB00EF0-9995-4DBC-B56B-481BA9851EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHRM.WebHelper", "DHRM.WebHelper\DHRM.WebHelper.csproj", "{CD6F322B-6327-48B1-81EB-BBD5163305D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHRM.WebApp", "DHRM.WebApp\DHRM.WebApp.csproj", "{54EC04EE-AB1C-445F-90CA-ED536E04B46D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHRM.BusinessEntity", "DHRM.BusinessEntity\DHRM.BusinessEntity.csproj", "{0CFC94BB-C7E2-43AD-AAA3-AD702E2C052C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHRM.Controllers", "DHRM.Controllers\DHRM.Controllers.csproj", "{6130959A-3CB5-4C4B-AB72-72D5FA569DA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSoft.AppConfiguration", "TSoft.AppConfiguration\TSoft.AppConfiguration.csproj", "{AD12E814-350B-4ACE-BBC2-267EA3DAEB44}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EB00EF0-9995-4DBC-B56B-481BA9851EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB00EF0-9995-4DBC-B56B-481BA9851EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB00EF0-9995-4DBC-B56B-481BA9851EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB00EF0-9995-4DBC-B56B-481BA9851EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD6F322B-6327-48B1-81EB-BBD5163305D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6F322B-6327-48B1-81EB-BBD5163305D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6F322B-6327-48B1-81EB-BBD5163305D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6F322B-6327-48B1-81EB-BBD5163305D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54EC04EE-AB1C-445F-90CA-ED536E04B46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54EC04EE-AB1C-445F-90CA-ED536E04B46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54EC04EE-AB1C-445F-90CA-ED536E04B46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54EC04EE-AB1C-445F-90CA-ED536E04B46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CFC94BB-C7E2-43AD-AAA3-AD702E2C052C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CFC94BB-C7E2-43AD-AAA3-AD702E2C052C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CFC94BB-C7E2-43AD-AAA3-AD702E2C052C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CFC94BB-C7E2-43AD-AAA3-AD702E2C052C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6130959A-3CB5-4C4B-AB72-72D5FA569DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6130959A-3CB5-4C4B-AB72-72D5FA569DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6130959A-3CB5-4C4B-AB72-72D5FA569DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6130959A-3CB5-4C4B-AB72-72D5FA569DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD12E814-350B-4ACE-BBC2-267EA3DAEB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD12E814-350B-4ACE-BBC2-267EA3DAEB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD12E814-350B-4ACE-BBC2-267EA3DAEB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD12E814-350B-4ACE-BBC2-267EA3DAEB44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

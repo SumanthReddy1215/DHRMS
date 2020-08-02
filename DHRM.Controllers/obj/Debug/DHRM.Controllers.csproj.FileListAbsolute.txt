@@ -1,0 +1,62 @@
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.Controllers.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.Controllers.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.BusinessEntity.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.WebHelper.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\EmailNotification.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\log4net.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\System.Web.Mvc.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\TSoft.AppConfiguration.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\AutoMapper.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.BusinessEntity.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.WebHelper.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\TSoft.AppConfiguration.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\log4net.xml
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\System.Web.Mvc.xml
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\AutoMapper.xml
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.csprojResolveAssemblyReference.cache
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.Controllers.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.Controllers.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.BusinessEntity.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.WebHelper.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\EmailNotification.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\log4net.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\System.Web.Mvc.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\TSoft.AppConfiguration.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\AutoMapper.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.BusinessEntity.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.WebHelper.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\TSoft.AppConfiguration.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\log4net.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\System.Web.Mvc.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.csprojResolveAssemblyReference.cache
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.Controllers.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.Controllers.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.BusinessEntity.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.WebHelper.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\EmailNotification.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\log4net.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\System.Web.Mvc.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\TSoft.AppConfiguration.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\AutoMapper.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\Newtonsoft.Json.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.BusinessEntity.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.DataAccess.dll.config
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\DHRM.WebHelper.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\TSoft.AppConfiguration.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\log4net.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\bin\Debug\System.Web.Mvc.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.csprojAssemblyReference.cache
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.csproj.CoreCompileInputs.cache
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.csproj.CopyComplete
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.Controllers\obj\Debug\DHRM.Controllers.pdb

@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+
+<h1 class="page-header" active-menu="#lead_reports" active-submenu="#menu-leadreport">Create Project</h1>
+
+<style>
+    .id_tancopy1 {
+        display: block !important;
+        background-color: black;
+    }
+</style>
+
+<form id="frmCreateProject" data-parsley-validate>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            <label>Project Name:<em>*</em></label>
+                            <input class="form-control" id="id_ProjectName" type="text" name="Project Name" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Project Description:<em>*</em></label>
+                            <input class="form-control" id="id_Description" type="text" name="Project Description" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Project Code:<em>*</em></label>
+                            <input class="form-control" id="id_ProjectCode" type="text" name="Project Code" />
+                        </div>
+
+
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-sm-4 ">
+                            <label>Start Date:<em>*</em></label>
+                            <input class="form-control" id="id_StartDate" type="date" name="Start Date" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>End Date:</label>
+                            <input type="date" id="id_EndDate" class="form-control" name="End Date" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Project Banner:<em>*</em></label>
+                            <input type="file" required class="form-control" id="id_logo" />
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            <label>Company Name:<em>*</em></label><br />
+                            <select id="Id_CompanyName" required="" class="form-control"></select>
+                        </div>
+
+                    </div>
+
+                    <div class="row margin-bottom10 margin-top10">
+                        <div class="col-md-12">
+                            <div style="float:right">
+                                <button class="btn btn-primary" onclick="btnsubmit()" type="button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div> <!-- / .panel-body -->
+
+            </div> <!-- / .panel-footer -->
+
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        LoadCompaniesList();
+    });
+
+        function LoadCompaniesList() {
+            $.ajax({
+                url: '../Projectmanagement/getCompaniesList',
+                type: "POST",
+                data: {
+                },
+                success: function (data) {
+                    $("#Id_CompanyName").append("<option value='0'>--Select--</option>");
+                    $(data).each(function (i) {
+                        $("#Id_CompanyName").append("<option value='" + data[i] + "'>" + data[i] + "</option>");
+                    });
+                },
+                error: function (errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+    }
+
+    function btnsubmit() {
+        var flag = parsleyForms.parsley().validate();
+        if (flag) {
+            var uploadFormData = new FormData();
+            uploadFormData.append('ProjectName', $("#id_ProjectName").val());
+            uploadFormData.append('ProjectDescription', $("#id_Description").val());
+            uploadFormData.append('ProjectCode', $("#id_ProjectCode").val());
+            uploadFormData.append('StartDate', $("#id_StartDate").val());
+            uploadFormData.append("EndDate", $("#id_EndDate").val());
+            uploadFormData.append('logo', ($("#id_logo"))[0].files[0]);
+            uploadFormData.append("CompanyName", $("#Id_CompanyName").val());
+
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Create", "Projectmanagement")',
+                contentType: false,
+                processData: false,
+                data: uploadFormData,
+                success: function (data) {
+                    debugger;
+                    alert(data);
+                },
+                error: function () {
+                }
+            });
+        }
+    }
+
+</script>

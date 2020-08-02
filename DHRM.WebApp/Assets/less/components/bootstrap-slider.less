@@ -1,0 +1,116 @@
+// Bootstrap slider (overwrites)
+// =============================
+
+.slider {
+
+	&.slider-horizontal {
+		width: 100%;
+	
+		> .slider-track {
+			top: 50%;
+			margin-top: -1px;
+			height: 2px;
+			background: @grey-light;
+			box-shadow: none;
+
+			> .slider-selection {
+				background: @brand-accent;
+				box-shadow: none;
+				transition: background .15s;
+			}
+		}
+		> .slider-handle {
+			top: 50%;
+			margin: 0;
+			background: @brand-accent;
+			width: 14px; height: 14px;
+			box-shadow: none;
+			transition: width .15s, height .15s, background-color .15s;
+			transform: translate(-50%;-50%);
+
+			&:hover, &:active, &:focus {
+				width: 20px; height: 20px;
+			}
+		}
+		> .slider-tick-container {
+
+			> .slider-tick {
+				width: 14px; height: 14px;
+				margin-left: -7px;
+				margin-top: 2px;
+				background: @grey-light;
+				opacity: 1;
+				box-shadow: none;
+
+				&.in-selection {
+					background: @brand-accent;
+				}
+			}
+		}
+		> .slider-tick-label-container {
+		}
+	}
+	&.slider-vertical {
+
+		> .slider-track {
+			left: 50%;
+			margin: 0 0 0 -1px;
+			width: 2px;
+			background: @grey-light;
+			box-shadow: none;
+
+			.slider-selection {
+				background: @brand-accent;
+				transition: background .15s;
+			}
+		}
+		> .slider-handle {
+			left: 50%;
+			margin: 0;
+			background: @brand-accent;
+			width: 14px; height: 14px;
+			box-shadow: none;
+			transition: all .15s;
+			transform: translate(-50%;-50%);
+
+			&:hover, &:active, &:focus {
+				width: 20px; height: 20px;
+			}
+		}
+		> .slider-tick-container {
+
+			> .slider-tick {
+				width: 14px; height: 14px;
+				margin-top: -7px;
+				margin-left: 2px;
+				background: @grey-light;
+				opacity: 1;
+				box-shadow: none;
+
+				&.in-selection {
+					background: @brand-accent;
+				}
+			}
+		}
+	}
+	&.slider-disabled {
+
+		.slider-track {
+
+			.slider-selection {
+				background: @grey-light;
+			}
+		}
+		.slider-handle {
+			border: 3px solid white;
+			background: @grey-light;
+
+			&:hover, &:active, &:focus {
+				width: 14px; height: 14px;	
+			}
+		}
+	}
+}
+.slider__caption {
+	margin-top: 10px;
+}

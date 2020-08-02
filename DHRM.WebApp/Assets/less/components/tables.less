@@ -1,0 +1,184 @@
+// ======
+// Tables
+// ======
+
+@table-cell-padding: 10px;
+@table-bg-accent: @grey-lighter;
+@table-bg-hover: @grey-lighter;
+@table-border-color: @grey-light;
+
+.table {
+	
+	// Header, footer
+
+	thead, tfoot {
+
+		tr {
+
+			th {
+				border-bottom-width: 1px;
+				vertical-align: middle;
+				font-weight: 500;
+				font-size: @font-size-small;
+				color: @text-muted;
+
+				input {
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	// Body
+
+	tbody {
+
+		tr {
+
+			td {
+				vertical-align: middle;
+				color: @text-color;
+
+				strong {
+					color: @text-color;
+				}				
+			}
+			th {
+				font-weight: 500;
+				font-size: @font-size-small;
+				color: @text-muted;
+			}
+		}
+	}
+	
+}
+
+
+// Table: Contextual classes
+// =========================
+
+.table {
+	
+	> thead, > tbody {
+
+		> tr, td, th {
+
+			&.selected, &.selected > td, &.selected > th {
+				background-color: @grey-lighter;
+			}
+			&.success, &.success > td, &.success > th {
+				background-color: tint(@brand-success,90%);
+			}
+			&.danger, &.danger > td, &.danger > th {
+				background-color: tint(@brand-danger,90%);
+			}
+			&.warning, &.warning > td, &.warning > th {
+				background-color: tint(@brand-warning,90%);
+			}
+			&.info, &.info > td, &.info > th {
+				background-color: tint(@brand-info,90%);
+			}
+		}
+	}
+}
+
+
+// Table: Avatar
+// =============
+
+.table__avatar {
+	vertical-align: middle;
+	display: inline-block;
+	width: 40px; height: 40px;
+	margin-right: 10px;
+	border-radius: 50%;
+	border: 2px solid @grey-light;
+	overflow: hidden;
+
+	> img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+// Table: Status
+// =============
+
+.table__status {
+
+	&.online {
+
+		> .fa {
+			color: @brand-success;
+		}
+	}
+	&.offline {
+
+		> .fa {
+			color: @brand-danger;
+		}
+	}
+	.fa {
+		margin-right: 10px;
+	}
+}
+
+
+// Table: filters
+// ==============
+
+.table__filters {
+	margin-bottom: 30px;
+
+	@media(max-width: @screen-xs-max) {
+
+		.pull-right {
+			float: none;
+			width: 100%;
+		}
+	}
+	@media(min-width: @screen-sm-min) {
+
+		.form-group {
+			padding: 0 5px;
+
+			> label {
+				margin-right: 10px;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+
+// Tables: Datatables
+// ==================
+
+.dataTables_wrapper {
+
+	.form-control {
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}	
+	}
+	.dt-buttons {
+		margin-bottom: 15px;
+	}
+
+}
+
+// Tables: Responsive
+// ==================
+
+.table-responsive {
+	border-width: 0;
+}

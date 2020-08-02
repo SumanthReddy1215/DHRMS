@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6130959A-3CB5-4C4B-AB72-72D5FA569DA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHRM.Controllers</RootNamespace>
+    <AssemblyName>DHRM.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EmailNotification, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DHRM.WebApp\Libraries\EmailNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompanyRegisterController.cs" />
+    <Compile Include="DashboardController.cs" />
+    <Compile Include="DocumentController.cs" />
+    <Compile Include="Helpers\AlertController.cs" />
+    <Compile Include="Helpers\BaseController.cs" />
+    <Compile Include="Helpers\TemplateManager.cs" />
+    <Compile Include="HomeController.cs" />
+    <Compile Include="ProjectmanagementController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserListController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DHRM.BusinessEntity\DHRM.BusinessEntity.csproj">
+      <Project>{0CFC94BB-C7E2-43AD-AAA3-AD702E2C052C}</Project>
+      <Name>DHRM.BusinessEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DHRM.DataAccess\DHRM.DataAccess.csproj">
+      <Project>{4eb00ef0-9995-4dbc-b56b-481ba9851ef2}</Project>
+      <Name>DHRM.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DHRM.WebHelper\DHRM.WebHelper.csproj">
+      <Project>{cd6f322b-6327-48b1-81eb-bbd5163305d5}</Project>
+      <Name>DHRM.WebHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSoft.AppConfiguration\TSoft.AppConfiguration.csproj">
+      <Project>{ad12e814-350b-4ace-bbc2-267ea3daeb44}</Project>
+      <Name>TSoft.AppConfiguration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

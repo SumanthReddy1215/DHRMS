@@ -1,0 +1,48 @@
+﻿.pagination > li > a, .pagination > li > span {
+    padding: 4px 10px !important;
+}
+
+.panel-body-table {
+    padding: 10px 15px 5px !important;
+}
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
+}
+
+
+
+em {
+    color:red;
+}
+
+.control-money {
+    width:100px !important;
+}
+
+table .dt-right {
+    text-align:right;
+}
+
+table .dt-center {
+    text-align:center;
+}
+table .dt-left {
+    text-align:left;
+}
+
+table tbody td {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+table tbody tr:hover {
+    background-color:#e0dede;
+}
+
+@media (min-width: 1200px) {
+    .control-label {
+        text-align: right;
+        width: 100%;
+    }
+}

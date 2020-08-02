@@ -1,0 +1,42 @@
+﻿@{
+    var UserInfo = ViewData["_UserInfo"] as DHRM.BusinessEntity.UserInfoEntity;
+}
+<!-- Sidebar: User -->
+<div class="sidebar__user">
+
+    <!-- Sidebar: User avatar -->
+    <div class="sidebar-user__avatar">
+        <img src="~/Content/ProfilePictures/1.jpg" alt="...">
+    </div>
+
+    <!-- Sidebar: User info -->
+    <a class="sidebar-user__info" role="button" href="#sidebar-user__nav" data-toggle="collapse" aria-expanded="false" aria-controls="sidebar-user__nav">
+        <h4>@UserInfo.MEM_UserName</h4>
+        <p>
+            @UserInfo.RoleName
+            <i class="fa fa-caret-down"></i>
+        </p>
+    </a>
+
+</div>
+<!-- / .sidebar__user -->
+<!-- Sidebar: User nav -->
+<nav class="sidebar-user__nav collapse" id="sidebar-user__nav">
+    <ul class="sidebar__nav">
+        <li>
+            <a href="#">
+                <i class="fa fa-user"></i> Profile
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-edit"></i> Edit profile
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action("Index","Home")">
+                <i class="fa fa-sign-out"></i> Sign out
+            </a>
+        </li>
+    </ul>
+</nav>

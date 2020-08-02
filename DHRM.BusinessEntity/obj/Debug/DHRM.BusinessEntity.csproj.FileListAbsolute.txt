@@ -1,0 +1,30 @@
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\DHRM.BusinessEntity.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\DHRM.BusinessEntity.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.csprojResolveAssemblyReference.cache
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\DHRM.BusinessEntity.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\DHRM.BusinessEntity.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.csprojResolveAssemblyReference.cache
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.csproj.CoreCompileInputs.cache
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\DHRM.BusinessEntity.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\DHRM.BusinessEntity.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.Helpers.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.Mvc.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.Razor.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.WebPages.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.WebPages.Razor.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.Helpers.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.Mvc.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.Razor.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.WebPages.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\bin\Debug\System.Web.WebPages.Razor.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.csproj.CopyComplete
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.BusinessEntity\obj\Debug\DHRM.BusinessEntity.csprojAssemblyReference.cache

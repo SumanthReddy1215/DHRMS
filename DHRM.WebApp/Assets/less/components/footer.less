@@ -1,0 +1,20 @@
+/**
+ * Footer
+ */
+
+.page__footer {
+	padding-bottom: (@grid-gutter-width / 2);
+	color: @text-muted;
+
+	a {
+		color: @brand-primary;
+
+		&:hover, &:focus {
+			color: shade(@brand-primary,10%);
+		}
+	}
+
+	@media(max-width: @screen-xs-max) {
+		text-align: center;
+	}
+}

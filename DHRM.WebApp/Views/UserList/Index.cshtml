@@ -1,0 +1,139 @@
+﻿@{
+    Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+@model DHRM.BusinessEntity.UserInfoEntity
+
+<h1 class="page-header" active-menu="#menu-dashboard">User List</h1>
+<h1 class="page-header" active-menu="#menu-companyrecords">@ViewData["Type"]</h1>
+
+<form data-parsley-validate action="@Url.Action("Preview")" method="post" id="frm_userlist">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row">
+
+                        @*@Html.Partial("_UserList", Model)*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div style="float:right">
+                <a href="@Url.Action("Index","Dashboard")" class="btn  btn-gray">
+                    Back
+                </a>
+                <button type="button" class="btn btn-primary" onclick="return formValidate();">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.multiselect').multiselect({
+            includeSelectAllOption: true,
+            // enableFiltering: true,
+            //enableCaseInsensitiveFiltering: true,
+            nonSelectedText: ' Select ',
+            numberDisplayed: 1,
+            maxHeight: 300,
+            selectAllValue: "0"
+
+        });
+
+        $("#id-leadtype").multiselect({
+            includeSelectAllOption: true,
+            nonSelectedText: ' Select ',
+            enableClickableOptGroups: true,
+            numberDisplayed: 1,
+            maxHeight: 300,
+            selectAllValue: "0"
+        });
+
+        LoadHiddenNames();
+        gridReload();
+
+    });
+
+    function LoadHiddenNames()
+    {
+        var loadNames = [
+            { source: "#id-movesize", target: "#hdnMoveSize" },
+            { source: "#id-destinationstate", target: "#hdnDestination" },
+            { source: "#id-leadtype", target: "#hdnLeadType" },
+            { source: "#id-grabbing", target: "#hdnGrabbing" }
+        ];
+
+        $.each(loadNames, function () {
+            var $source = $(this.source).find("option:selected");
+            var $target = $(this.target);
+
+            var str = '';
+            $source.each(function () {
+                str += str == '' ? $(this).text().replace(/ /g,'&nbsp;') : ", " + $(this).text().replace(/ /g,'&nbsp;');
+            });
+
+            $target.val(str);
+
+        });
+    }
+
+    function gridReload()
+    {
+        $('#grid-orgin').mvcgrid({
+            reload: true,
+            requestType: 'post'
+        });
+    }
+
+    function changeVal(id, obj) {
+        $(id).val($(obj).find("option:selected").text());
+    }
+
+    function addOriginState()
+    {
+        var flag = parsleyForms.parsley().validate({ group: 'origin' })
+        if (flag)
+        {
+            var data = {
+                companyId: $("#hdnCompanyID").val(),
+                originItem: {
+                    StateID: $("#f-originstate").val(),
+                    StateName: $("#hdnState").val(),
+                    OrginBy: $("#id-originby").val(),
+                    ZipCode: $("#id-areaorzipcode").val(),
+                    AreaCode: $("#id-areaorzipcode").val()
+                }
+            };
+
+            $.ajaxPost('@Url.Action("Additem")', data, function () {
+                $("#f-originstate, #id-originby,#hdnState, #id-originby, #id-areaorzipcode").val('');
+                gridReload();
+            });
+        }
+    }
+
+    function deleteOrrigin(stateId)
+    {
+        $.ajaxPost('@Url.Action("DeleteOrigin")', { stateId : stateId}, function () {
+            gridReload();
+        });
+    }
+
+    function formValidate()
+    {
+        var flag = parsleyForms.parsley().validate({ group: 'form' })
+        if (flag) {
+            LoadHiddenNames();
+            $("#frm_userlist")[0].submit();
+        }
+    }
+</script>

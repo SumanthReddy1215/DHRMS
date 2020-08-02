@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "DocumentMaster";
+    Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+@model DHRM.BusinessEntity.DocumentInfoEntity
+
+<h1 class="page-header" active-menu="#lead_reports" active-submenu="#menu-leadreport">Document Master</h1>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.DocType)
+                            @Html.DropDownListFor(model => model.DocType, new SelectList(Model.DocumentTypeList, "DocType_Code", "DocType_Name"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DocType)
+                        </div>
+                        <div class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.DocName)
+                            @Html.TextBoxFor(model => model.DocName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DocName)
+                        </div>
+                        <div class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.FileType)
+                            @Html.ListBoxFor(m => m.Filetype_DTO.FileTypeIds, Model.Filetype_DTO.FileTypes, new { @class = "multiselect-ui form-control" })
+                            @Html.ValidationMessageFor(model => model.Filetype_DTO.FileTypeIds)
+                        </div>
+
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.MaxFileSize)
+                            @Html.TextBoxFor(model => model.MaxFileSize, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.MaxFileSize)
+                        </div>
+                        <div class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.IsRequired)
+                            @Html.CheckBoxFor(model => model.IsRequired, new { @class = "form-check" })
+                            @Html.ValidationMessageFor(model => model.IsRequired)
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <input type="submit" class="btn btn-success" value="Create" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.multiselect-ui').multiselect({
+            includeSelectAllOption: true
+        });
+    });
+</script>
+<style>
+    .form-check {
+        display: block !important;
+    }
+</style>
+@*<script type="text/javascript">
+        function btnsubmit() {
+            debugger;
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: '/Document/SaveDocument',
+                data: {
+                    DocCode: $("#id_DocCode").val(),
+                    DocType: $("#id_DocType").val(),
+                    DocName: $("#id_DocName").val(),
+                    FileTypes: $("#id_FileTypes").val(),
+                    MaxFileSize: $("#id_MaxFileSize").val(),
+                    IsRequired: $("#id_IsRequired").val()
+                },
+                success: function (Data) {
+                    //alert(data.id);
+                    //alert(data.name);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            });
+        }
+
+
+        function resetForm() {
+            $('#frmDocumentMaster').trigger('reset');
+            $('#LeadTypeCode').val('');
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            LoadDocType();
+
+        });
+
+        function LoadDocType() {
+            $.ajax({
+                url: '../Document/GetDocumentType',
+                type: "POST",
+                data: {
+                },
+                success: function (data) {
+                    $("#DocType").append("<option value='0'>--Select--</option>");
+                    $(data).each(function (i) {
+                        $("#DocType").append("<option value='" + data[i].DocType_Code + "'>" + data[i].DocType_Name + "</option>");
+                    });
+                },
+                error: function (errorThrown) {
+                }
+            });
+        }
+    </script>*@
+
+

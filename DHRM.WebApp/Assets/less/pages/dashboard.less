@@ -1,0 +1,356 @@
+/**
+ * Dashboard
+ */
+
+
+/*** Dashboard: Stats ***/
+
+.dashboard-stats__item {
+	position: relative;
+	overflow: hidden;
+	padding: 30px 20px;
+	margin-bottom: @grid-gutter-width;
+	border-radius: @border-radius-base;
+	box-shadow: 0 1px 3px fade(black,12%), 0 1px 2px fade(black,24%);
+
+	> .fa {
+		position: absolute;
+		bottom: -20%; left: -5%;
+		font-size: 100px;
+		color: fade(white,15%);
+	}
+
+	&.dashboard-stats__item_red {
+		background-color: @brand-red-400;
+	}
+	&.dashboard-stats__item_orange {
+		background-color: @brand-orange-400;
+	}
+	&.dashboard-stats__item_green {
+		background-color: @brand-green-400;
+	}
+	&.dashboard-stats__item_light-blue {
+		background-color: @brand-light-blue-400;
+	}
+}
+.dashboard-stats__title {
+	margin: 0;
+	text-align: right;
+	font-size: 45px;
+	font-weight: 300;
+	color: @text-white-color;
+
+	> small {
+		display: block;
+		font-size: @font-size-large;
+		text-transform: capitalize;
+		color: @text-white-muted;
+	}
+}
+
+/*** Dashboard: Stats alt ***/
+
+.dashboard__stats_alt {
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: @grid-gutter-width;
+		padding: 0 @grid-gutter-width;
+		
+		@media(min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+			flex-direction: column;
+		}
+
+		&__circle {
+			position: relative;
+			width: 140px; height: 140px;
+
+			&__title {
+				position: absolute;
+				top: 50%; left: 50%;
+				transform: translate(-50%;-50%);
+				font-size: 34px;
+				font-weight: 300;
+
+				> small {
+					margin-left: -5px;
+					font-size: .5em
+				}
+			}
+		}
+		&__body {
+			padding: 0 15px;
+
+			&__heading {
+				text-align: center;
+				font-size: 34px;
+				font-weight: 300;
+
+				> small {
+					display: block;
+					font-size: @font-size-large;
+					color: @text-muted;
+				}
+			}
+		}
+	}
+}
+
+/*** Dashboard: Comments ***/
+
+.dashboard-comments__item {
+	position: relative;
+	padding: @padding-large-vertical*1.5 @padding-large-horizontal;
+	border-bottom: 1px solid #eee;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+.dashboard-comments__controls {
+	margin-top: 10px;
+
+	> a {
+		display: inline-block;
+		font-size: @font-size-small;
+		text-transform: uppercase;
+		color: @text-muted;
+
+		&:hover, &:focus {
+			color: @link-hover-color;
+		}
+
+		+ a {
+			margin-left: 8px;
+		}
+	}
+}
+.dashboard-comments__avatar {
+	display: block;
+	float: left; 
+	margin-right: 20px;
+	width: 40px; height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+
+	> img {
+		width: 100%; height: auto;
+	}
+}
+.dashboard-comments__body {
+	overflow: hidden;
+}
+.dashboard-comments__sender {
+	color: @text-color;
+	font-weight: 700;
+	margin: 5px 0;
+
+	> small {
+		margin-left: 5px;
+		font-size: @font-size-small;
+		font-weight: 400;
+		color: @text-disabled;
+
+		@media(max-width: @screen-xs-max) {
+			display: block;
+			margin: 5px 0 10px;
+		}
+	}
+}
+.dashboard-comments__content {
+	color: @text-muted;
+}
+
+
+/*** Dashboard: Feed ***/
+
+.dashboard-feed__item {
+	.clearfix();
+	padding: @padding-large-vertical @padding-large-horizontal;
+	border-bottom: 1px solid @grey-light;
+	color: @text-muted;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+	> .label {
+		.square(25px);
+		display: inline-block;
+		padding: 0;
+		margin-right: 10px;
+		border-radius: 50%;
+	}
+	> small {
+		float: right;
+		color: #aaa;
+
+		@media(max-width: @screen-xs-max) {
+			float: none;
+			display: block;
+			margin-left: 35px;
+		}
+	}
+}
+
+
+/*** Dashboard: Milestones ***/
+
+.dashboard__milestones {
+
+	&__timeline {
+		display: flex;
+		list-style: none;
+		padding: 60px 30px;
+
+		> li {
+			position: relative;
+			border-top: 2px solid @grey-light;
+			flex-grow: 1;
+
+			> a {
+				position: absolute;
+				top: 0; right: 0;
+				display: block;
+				width: 15px; height: 15px;
+				border: 2px solid @brand-accent;
+				border-radius: 50%;
+				background-color: white;
+				transform: translateY(~"calc(-50% - 1px)");
+
+				> time {
+					position: absolute;
+					left: 50%; top : -30px;
+					display: block;
+					min-width: 50px;
+					text-align: center;
+					color: @text-muted;
+					transform: translateX(-50%);
+				}
+				&:before, &:after {
+					display: none;
+					content: '';
+					position: absolute;
+					left: -50%;
+					width: 0; height: 0;
+					border-bottom-width: 15px;
+					border-bottom-style: solid;
+					border-left: 12.5px solid transparent;
+					border-right: 12.5px solid transparent;
+				}
+				&:before {
+					top: 60px;
+					border-bottom-color: @grey-light;
+				}
+				&:after {
+					top: 62px;
+					border-bottom-color: white;
+
+				}
+
+				&:hover, &:active, &:focus {
+					text-decoration: none;	
+				}
+			}
+
+			&:first-child {
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0; left: 0;
+					display: block;
+					width: 15px; height: 15px;
+					border: 2px solid @brand-accent;
+					border-radius: 50%;
+					background-color: @brand-accent;
+					transform: translateY(~"calc(-50% - 1px)");
+				}
+				&:after {
+					content: attr(data-start);
+					position: absolute;
+					left: 0; top : -35px;
+					display: block;
+					color: @text-muted;
+					transform: translateX(~"calc(-50% + 7.5px)");
+				}
+			}
+
+			&.complete {
+				border-color: @brand-accent;
+
+				> a {
+					background-color: @brand-accent;
+				}
+			}
+
+			&.active {
+
+				> a {
+
+					&:before, &:after {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	&__content {
+		padding: 25px;
+		border: 1px solid @grey-light;
+	}
+}
+
+
+/*** Dashboard: Tasks ***/
+
+.dashboard__tasks {
+	
+	.checkbox {
+		margin: 0;
+		padding: @padding-large-vertical @padding-large-horizontal;
+
+		+ .checkbox {
+			border-top: 1px solid @grey-light;
+		}
+
+		&:hover, &:active, &:focus {
+			background-color: @grey-lighter;	
+		}
+	}
+}
+
+/*** Dashboard: New users ***/
+
+.dashboard__users {
+
+	&__username {
+
+		&__img {
+			display: inline-block;
+			vertical-align: middle;
+			width: 40px; height: 40px;
+			margin-right: 10px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			> img {
+				width: 100%; height: auto;
+			}
+		}
+	}
+	&__username {
+		font-weight: bold;
+	}
+	&__status {
+		
+		&.active {
+			color: @brand-success;
+		}
+		&.pending {
+			color: @brand-warning;
+		}
+	}
+}

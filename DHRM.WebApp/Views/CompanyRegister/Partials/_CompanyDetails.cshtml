@@ -1,0 +1,64 @@
+﻿@model DHRM.BusinessEntity.CompanyRegisterEntity
+<div class="row">
+    <div class="col-sm-4">Company Logo:</div>
+    <div class="col-sm-8">@Model.CompanyLogo &nbsp;</div>
+    <div class="col-sm-4">Company Name:</div>
+    <div class="col-sm-8">@Model.CompanyName &nbsp;</div>
+    <div class="col-sm-4">Address:</div>
+    <div class="col-sm-8">@Model.FullAddress &nbsp;</div>
+    <div class="col-sm-4">Contact Person:</div>
+    <div class="col-sm-8">@Model.ContactPerson &nbsp;</div>
+    <div class="col-sm-4">Contact Email:</div>
+    <div class="col-sm-8">@Model.ContactEmail &nbsp;</div>
+    <div class="col-sm-4">Phone No:</div>
+    <div class="col-sm-8">@Model.ContactPhone &nbsp;</div>
+</div>
+@*@using DHRM.BusinessEntity;
+    @(Html.Grid<DHRM.BusinessEntity.CompanyRegisterEntity>(Model)
+        .Build(columns =>
+        {
+            columns.Add(model => model.CompanyLogo).Titled("Company Logo");
+            columns.Add(model => model.CompanyName).Titled("Company Name");
+            //columns.Add(model => model).Titled("Created Date").RenderedAs(model => model.CreatedDate.ToString("MM/dd/yyyy"));
+            columns.Add(model => model.FullAddress).Titled("Address");
+            columns.Add(model => model.ContactPerson).Titled("Contact Person");
+            columns.Add(model => model.ContactEmail).Titled("Contact Email");
+            columns.Add(model => model.ContactPhone).Titled("Contact Phone");
+            columns.Add(model => model).Titled("Actions").Encoded(false)
+                    .RenderedAs(model =>
+                    string.Format("<button type='button' title='Request For Approval' class='btn btn-primary btn-xs'><i class='fa fa-list' aria-hidden='true'></i></button>&nbsp;<button type='button' onclick='{0}' title='Edit' class='btn btn-primary btn-xs'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>&nbsp;<button type='button' title='Delete' class='btn btn-primary btn-xs'><i class='fa fa-trash' aria-hidden='true'></i></button>",
+                        string.Format(@"openContractPage(""{0}"",{1},{2})",  model.ID)
+                    )
+                ).Css("mvc-grid-text-align-center grid-width-120");
+
+        })
+        .Named("grid-contrat")
+        .Empty(Model.NoRecordsFoundText)
+    )
+
+    <script type="text/javascript">
+        function openContractPage(leadType,mid,cid)
+        {
+            // lead contract
+            if (leadType.toLowerCase() == "leads contract")
+            {
+                processDialog.show();
+                window.location.href = '@Url.Action("Index","LeadContract")?mid=' + mid + '&cid=' + cid + '&type=1';
+            }
+            if (leadType.toLowerCase() == "listing contract") {
+                processDialog.show();
+                window.location.href = '@Url.Action("Index","LeadContract")?mid=' + mid + '&cid=' + cid + '&type=2';
+            }
+            else if (leadType.toLowerCase() == "website contract") {
+                processDialog.show();
+                window.location.href = '@Url.Action("Index", "WebsiteContract")?mid=' + mid + '&cid=' + cid;
+            }
+
+            // add few more condions for other contrats
+        }
+    </script>*@
+
+
+
+
+

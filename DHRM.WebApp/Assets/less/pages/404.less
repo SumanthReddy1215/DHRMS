@@ -1,0 +1,27 @@
+// ===
+// 404
+// ===
+
+.not-found {
+	height: calc(~"100vh - "@navbar-height + @navbar-margin-bottom);
+	display: flex;
+	align-items: center;
+
+	&__content {
+		width: 100%;
+		text-align: center;
+		
+		&__img {
+			width: 75px; height: auto;
+			margin-bottom: 20px;
+		}
+		&__heading { 
+			margin: 0 0 20px;
+			font-size: 34px;
+			font-weight: 300;
+		}
+		&__desc {
+			margin-bottom: 40px;
+		}
+	}
+}

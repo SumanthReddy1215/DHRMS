@@ -1,0 +1,164 @@
+// =======
+// Buttons
+// =======
+
+@btn-border-radius-small: 2px;
+@btn-border-radius-base: 2px;
+@btn-border-radius-large: 2px;
+
+.btn {
+	border: 0;
+	outline: none;
+	line-height: 20px;
+	font-size: @font-size-small;
+	font-weight: 500;
+	text-transform: uppercase;
+	box-shadow: none;
+	transition: all .15s;
+	overflow: hidden; // required for animation
+	.click-animation();
+
+	&:hover {
+		outline: none;
+		box-shadow: 0 1px 3px fade(black,12%);
+	}
+	&:focus, &:active, &:active:focus {
+		outline: none;
+		box-shadow: 0 2px 6px fade(black,12%);
+	}
+
+	> .fa {
+		display: inline-block;
+		min-width: 20px;
+	}
+}
+.btn(@bg, @color) {
+	background-color: @bg;
+	color: @color;
+
+	&:hover {
+		background-color: shade(@bg,5%);
+		color: @color;
+	}
+	&.dropdown-toggle:hover, &.dropdown-toggle:focus,
+	&:focus, &:active, &:active:focus {
+		background-color: shade(@bg,10%);
+		color: @color;
+	}
+}
+
+// Split buttons dropdowns
+
+.open > .dropdown-toggle.btn:focus {
+	border-color: fade(white,50%);
+}
+
+
+// Button: sizes
+// =============
+
+.btn-lg {
+	font-size: @font-size-base;
+}
+.btn-xs {
+	font-size: @font-size-base - 2px;
+}
+
+
+// Button: contextual styles
+// =========================
+
+.btn-link {
+	.btn(transparent, @brand-primary);
+	border-radius: @border-radius-base;
+	box-shadow: none !important;
+
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus, &:active, &:active:focus {
+		text-decoration: none;
+	}
+}
+.open > .btn-default, .btn-default {
+	.btn(@grey-light,@text-color);
+}
+.open > .btn-primary, .btn-primary {
+	.btn(@brand-primary, white);
+}
+.open > .btn-accent, .btn-accent {
+	.btn(@brand-accent, white);
+}
+.open > .btn-danger, .btn-danger {
+	.btn(@brand-danger, white);
+}
+.open > .btn-success, .btn-success {
+	.btn(@brand-success, white);
+}
+.open > .btn-warning, .btn-warning {
+	.btn(@brand-warning, white);
+}
+.open > .btn-info, .btn-info {
+	.btn(@brand-info, white);
+}
+
+
+// Button group
+// ============
+
+.btn-group {
+
+	.btn {
+
+		+ .btn {
+			border-left: 1px solid fade(white,30%);
+			margin: 0;
+		}
+	}
+
+	> .btn-group {
+
+		.btn {
+
+			&:first-child {
+				border-left: 1px solid fade(white,30%);
+				margin-left: 0;	
+			}
+		}
+	}
+}
+.btn-group-vertical {
+
+	.btn, .btn-group {
+		margin: 0;
+
+		+ .btn, + .btn-group {
+			margin-top: 1px;
+		}
+	}
+}
+
+
+// Floating buttons
+// ================
+
+.btn-floating {
+	.icon-circle(56px);
+	padding: 0;
+	font-size: 16px;
+	.click-animation();
+	box-shadow: 0 2px 2px 0 fade(black,14%), 
+				0 1px 5px 0 fade(black,12%), 
+				0 3px 1px -2px fade(black,20%);
+
+	&:after {
+		min-width: 0; min-height: 0;
+	}
+
+	&:hover, &.dropdown-toggle:hover, &.dropdown-toggle:focus,
+	&:focus, &:active, &:active:focus {
+		box-shadow: 0 3px 3px 0 fade(black,14%), 
+					0 1px 7px 0 fade(black,12%), 
+					0 3px 1px -1px fade(black,20%);
+	}
+}

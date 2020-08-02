@@ -1,0 +1,278 @@
+/**
+ * Havbar
+ */
+
+// Navbar: General
+
+@navbar-height: 65px;
+@navbar-margin-bottom: 0;
+@navbar-border-radius: 0;
+
+
+// Navbar: Default
+
+.navbar {
+	border: 0;
+	box-shadow: 0 2px 5px 0 fade(black,25%);
+
+	> .container-fluid {
+		padding: 0;
+	}
+}
+.navbar-btn.navbar-right {
+	margin-left: @navbar-padding-horizontal;
+	margin-right: 0;
+}
+
+
+/*** Navbar: Links ***/
+
+.navbar-nav {
+
+	> li {
+
+		> a {
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: @font-size-small;
+			transition: color .15s;
+
+			> i {
+				line-height: @line-height-computed;
+				font-size: 1.2em;
+			}
+		}
+	}
+}
+
+
+/*** Navbar notification ***/
+
+.navbar-notification {
+	position: absolute;
+	top: @navbar-padding-vertical - 5px;
+	right: @navbar-padding-horizontal - 8px;
+	.square(7px);
+	border-radius: 50%;
+	background-color: @brand-accent;
+	font-size: 11px;
+	color: white;
+}
+
+
+/*** Navbar: messages ***/
+
+.navbar-messages {
+	min-width: 280px;
+	padding: 0;
+
+	> a {
+		.clearfix();
+		display: block;
+		padding: @padding-base-vertical @padding-base-horizontal;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+}
+.navbar-messages__item {
+	border-bottom: 1px solid fade(black, 5%);
+
+	&:hover, &:focus {
+		background-color: @grey-lighter;
+	}
+}
+.navbar-messages__avatar {
+	display: block;
+	float: left;
+	margin: 5px 10px 0 0;
+	width: 40px; height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+
+	> img {
+		width: 100%; height: auto;
+	}
+}
+.navbar-messages__body {
+	overflow: hidden;
+}
+.navbar-messages__sender {
+	color: @text-color;
+	font-weight: 700;
+	margin: 5px 0;
+
+	> small {
+		float: right;
+		margin-left: 5px;
+		font-size: @font-size-small;
+		color: @text-disabled;
+	}
+}
+.navbar-messages__content {
+	color: @text-muted;
+}
+.navbar-messages__view-all {
+	padding: @padding-large-vertical @padding-large-horizontal !important;
+	background-color: #f9f9f9;
+	border-radius: 0 0 @border-radius-base @border-radius-base;
+	text-align: center;
+	font-size: @font-size-small;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: @text-muted;
+
+	&:hover, &:focus {
+		color: @text-color;
+		text-decoration: none;
+	}
+}
+
+
+/*** Navbar: alerts ***/
+
+.navbar-alerts {
+	min-width: 280px;
+	padding: 0;
+
+	> a {
+		.clearfix();
+		display: block;
+		padding: @padding-base-vertical @padding-base-horizontal;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+}
+.navbar-alerts__item {
+	line-height: 20px;
+	border-bottom: 1px solid fade(black, 5%);
+	color: @text-muted;
+
+	&:hover, &:focus {
+		background-color: @grey-lighter;
+		color: @text-muted;
+	}
+	> span {
+		.icon-circle(20px);
+		display: inline-block;
+		padding: 0;
+		margin-right: 10px;
+		border-radius: 50%;
+		vertical-align: middle;
+	}
+	> small {
+		float: right;
+		margin-left: 5px;
+		font-size: @font-size-small;
+		color: @text-disabled;
+	}
+}
+.navbar-alerts__view-all {
+	padding: @padding-large-vertical @padding-large-horizontal !important;
+	background-color: #f9f9f9;
+	border-radius: 0 0 @border-radius-base @border-radius-base;
+	text-align: center;
+	font-size: @font-size-small;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: @text-muted;
+
+	&:hover, &:focus {
+		color: @text-color;
+		text-decoration: none;
+	}
+}
+
+
+/*** Navbar dropdowns ***/
+
+@media(max-width: @screen-xs-max) {
+	.navbar-messages,
+	.navbar-alerts {
+		position: fixed;
+		top: (@navbar-height + 1px);
+		left: 0px !important; 
+		right: 0px !important;
+	}
+}
+
+
+/*** Navbar: Form ***/
+
+.navbar-form {
+	
+	.input-group {
+		margin-bottom: 0;
+
+		.form-control {
+			padding: @padding-base-vertical 50px @padding-base-vertical @padding-base-horizontal;
+			border: 0;
+			border-radius: @border-radius-base;
+			background-color: fade(white,15%);
+			color: @text-white-color;
+			.placeholder(@text-white-muted);
+
+			&:focus {
+				border-color: @brand-accent;
+			}
+			+ .input-group-btn {
+				transform:  translateX(-100%);
+				z-index: 10;
+
+				> .btn {
+					
+					&:after {
+						display: none;
+					}
+					&:hover {
+						background-color: transparent;
+						color: white;
+					}
+					&:focus, &:active, &:active:focus {
+						background-color: transparent;
+						color: white;
+					}
+				}
+			}
+
+			@media(min-width: @screen-sm-min) {
+				min-width: 250px;
+			}
+		}
+	}
+}
+
+
+/*** Navbar: Brand ***/
+
+.navbar-brand {
+	display: none;
+	font-size: 18px;
+	width: @sidebar-width;
+	border-right: 1px solid @text-white-divider;
+
+	@media(min-width: @screen-md-min) {
+		display: block;
+	}
+}
+
+
+/*** Navbar: Toggle menu ***/
+
+#sidebar__toggle {
+	padding: 5px @padding-base-horizontal;
+	font-size: 1.4em;
+	color: fade(white,70%);
+	transition: color .15s;
+
+	> img {
+		height: 15px; width: auto;
+	}
+	
+	&:hover, &:active, &:focus {
+		color: white;
+	}
+}

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHRM_COREModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DepID" />
+    </Key>
+    <Property Name="DepID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="USERROLEs" Relationship="Self.FK_USERROLE_DEPARTMENT" FromRole="DEPARTMENT" ToRole="USERROLE" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TemplateBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedIP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedIP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ROLE">
+    <Key>
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="ROLEID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Boolean" />
+    <NavigationProperty Name="USERROLEs" Relationship="Self.FK_USERROLE_ROLE" FromRole="ROLE" ToRole="USERROLE" />
+  </EntityType>
+  <EntityType Name="USERADMIN">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UNAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PWD" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="EMAILID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Boolean" />
+    <NavigationProperty Name="USERROLEs" Relationship="Self.FK_USERROLE_USERADMIN" FromRole="USERADMIN" ToRole="USERROLE" />
+  </EntityType>
+  <EntityType Name="USERROLE">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+      <PropertyRef Name="ROLEID" />
+      <PropertyRef Name="DepID" />
+    </Key>
+    <Property Name="ADMINID" Type="Int64" Nullable="false" />
+    <Property Name="ROLEID" Type="Int64" Nullable="false" />
+    <Property Name="DepID" Type="Int64" Nullable="false" />
+    <Property Name="STATUS" Type="Boolean" />
+    <NavigationProperty Name="DEPARTMENT" Relationship="Self.FK_USERROLE_DEPARTMENT" FromRole="USERROLE" ToRole="DEPARTMENT" />
+    <NavigationProperty Name="ROLE" Relationship="Self.FK_USERROLE_ROLE" FromRole="USERROLE" ToRole="ROLE" />
+    <NavigationProperty Name="USERADMIN" Relationship="Self.FK_USERROLE_USERADMIN" FromRole="USERROLE" ToRole="USERADMIN" />
+  </EntityType>
+  <Association Name="FK_USERROLE_DEPARTMENT">
+    <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="1" />
+    <End Role="USERROLE" Type="Self.USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTMENT">
+        <PropertyRef Name="DepID" />
+      </Principal>
+      <Dependent Role="USERROLE">
+        <PropertyRef Name="DepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERROLE_ROLE">
+    <End Role="ROLE" Type="Self.ROLE" Multiplicity="1" />
+    <End Role="USERROLE" Type="Self.USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLE">
+        <PropertyRef Name="ROLEID" />
+      </Principal>
+      <Dependent Role="USERROLE">
+        <PropertyRef Name="ROLEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERROLE_USERADMIN">
+    <End Role="USERADMIN" Type="Self.USERADMIN" Multiplicity="1" />
+    <End Role="USERROLE" Type="Self.USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERADMIN">
+        <PropertyRef Name="ADMINID" />
+      </Principal>
+      <Dependent Role="USERROLE">
+        <PropertyRef Name="ADMINID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DHRM_COREEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEPARTMENTs" EntityType="Self.DEPARTMENT" />
+    <EntitySet Name="EmailTemplates" EntityType="Self.EmailTemplate" />
+    <EntitySet Name="ROLEs" EntityType="Self.ROLE" />
+    <EntitySet Name="USERADMINs" EntityType="Self.USERADMIN" />
+    <EntitySet Name="USERROLEs" EntityType="Self.USERROLE" />
+    <AssociationSet Name="FK_USERROLE_DEPARTMENT" Association="Self.FK_USERROLE_DEPARTMENT">
+      <End Role="DEPARTMENT" EntitySet="DEPARTMENTs" />
+      <End Role="USERROLE" EntitySet="USERROLEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERROLE_ROLE" Association="Self.FK_USERROLE_ROLE">
+      <End Role="ROLE" EntitySet="ROLEs" />
+      <End Role="USERROLE" EntitySet="USERROLEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERROLE_USERADMIN" Association="Self.FK_USERROLE_USERADMIN">
+      <End Role="USERADMIN" EntitySet="USERADMINs" />
+      <End Role="USERROLE" EntitySet="USERROLEs" />
+    </AssociationSet>
+    <FunctionImport Name="USP_GETUSERINFO" ReturnType="Collection(DHRM_COREModel.USP_GETUSERINFO_Result)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="VW_GetUserInfo" EntityType="DHRM_COREModel.VW_GetUserInfo" />
+  </EntityContainer>
+  <ComplexType Name="USP_GETUSERINFO_Result">
+    <Property Type="Int64" Name="ADMINID" Nullable="false" />
+    <Property Type="String" Name="UNAME" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="PWD" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="EMAILID" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="STATUS" Nullable="true" />
+    <Property Type="String" Name="RoleName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="VW_GetUserInfo">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="Int64" Nullable="false" />
+    <Property Name="UNAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PWD" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="EMAILID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Boolean" />
+    <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

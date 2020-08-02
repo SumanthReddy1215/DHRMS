@@ -1,0 +1,23 @@
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\TSoft.AppConfiguration.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\TSoft.AppConfiguration.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.csprojResolveAssemblyReference.cache
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\System.Net.Http.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\System.Net.Http.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\TSoft.AppConfiguration.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\TSoft.AppConfiguration.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\System.Net.Http.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\System.Net.Http.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.csprojResolveAssemblyReference.cache
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\TSoft.AppConfiguration.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\TSoft.AppConfiguration.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\System.Net.Http.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\bin\Debug\System.Net.Http.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.csproj.CoreCompileInputs.cache
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.csproj.CopyComplete
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\TSoft.AppConfiguration\obj\Debug\TSoft.AppConfiguration.csprojAssemblyReference.cache

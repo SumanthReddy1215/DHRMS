@@ -1,0 +1,240 @@
+// =====
+// Forms
+// =====
+
+@input-color: @text-color;
+@input-border-radius: 0px;
+@input-border-radius-small: 0px;
+@input-border-radius-large: 0px;
+@input-border: @grey-light;
+@input-border-focus: @brand-accent;
+
+form {
+	
+	p {
+		margin-bottom: 15px;
+	}
+
+	// Form group
+
+	.form-group, .input-group {
+		margin-bottom: 16px;
+
+		// Form controls
+
+		.form-control {
+			padding-left: 0;
+			padding-right: 0;
+			border-width: 0 0 1px 0;
+			border-radius: 0;
+			background-color: transparent;
+			box-shadow: none !important;
+			.placeholder(@text-disabled);
+
+			&:focus {
+				outline: none !important;
+				box-shadow: none !important;
+				border-bottom-color: @brand-accent;
+			}
+		}
+		select.form-control {
+
+			&:focus {
+				border-bottom-color: transparent;
+			}
+		}
+
+		// Labels
+
+		label {
+			color: @text-muted;
+			font-weight: 500;
+		}
+
+		// Addon
+
+		&-addon {
+			background-color: transparent;
+			border: 0;
+			color: @text-muted;
+		}
+
+	}
+
+	// Checkbox
+
+	input[type="checkbox"] {
+		display: none;
+
+		+ label {
+			display: flex;
+			align-items: center;
+			position: relative;
+			padding-left: 0;
+			color: @text-muted !important;
+			
+			> a {
+				color: @text-muted;
+			}
+			&:before {
+				.square(18px);
+				min-width: 18px;
+				content: "\f00c";
+				font-family: "FontAwesome";
+				margin-right: 15px;
+				margin-bottom: 4px;
+				background-color: white;
+				border-radius: @border-radius-base;
+				border: 2px solid @input-border;
+				color: white;
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+		&:checked {
+
+			+ label {
+
+				&:before {
+					background-color: @brand-accent;
+					border-color: @brand-accent;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0; top: 50%;
+					margin-top: -11px;
+					width: 18px; height: 18px;
+					border-radius: 50%;
+					background-color: fade(black,5%);
+					opacity: 0;
+					animation: checkboxAnimation .4s linear;
+				}
+			}
+		}
+		&:disabled + label:before {
+			border-color: tint(@input-border,10%);
+		}
+	}
+
+	@keyframes checkboxAnimation {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		50% {
+			opacity: 1;
+			transform: scale(2);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(4);
+		}
+	}
+
+
+	// Radio buttons
+
+	input[type="radio"] {
+		display: none;
+
+		+ label {
+			display: flex;
+			align-items: center;
+			position: relative;
+			padding-left: 0;
+			color: @text-muted !important;
+			
+			> a {
+				color: @text-muted;
+			}
+			&:before {
+				display: block;
+				.square(18px);
+				min-width: 18px;
+				content: "";
+				margin-right: 15px;
+				margin-bottom: 4px;
+				border-radius: 50%;
+				border: 2px solid @input-border;
+			}
+		}
+		&:checked {
+
+			+ label {
+
+				&:before {
+					border-color: @brand-accent;
+					background: @brand-accent;
+					background-clip: content-box;
+					padding: 3px;
+					line-height: 16px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0; top: 0;
+					width: 18px; height: 18px;
+					border-radius: 50%;
+					background-color: fade(black,5%);
+					opacity: 0;
+					animation: checkboxAnimation .4s linear;
+				}
+			}
+		}
+		&:disabled + label:before {
+			border-color: tint(@input-border,10%);
+		}
+	}
+
+	// Validation states
+	
+	.form-group, .input-group, .checkbox, .radio {
+
+		&.has-success {
+
+			@color: #1B5E20;
+			
+			label, .help-block, .input-addon {
+				color: @color;
+			}
+			.form-control {
+				border-bottom-color: @color;
+			}
+		}
+		&.has-warning {
+
+			@color: #FF6F00;
+			
+			label, .help-block, .input-addon {
+				color: @color;
+			}
+			.form-control {
+				border-bottom-color: @color;
+			}
+		}	
+		&.has-error {
+
+			@color: #B71C1C;
+			
+			label, .help-block, .input-addon {
+				color: @color;
+			}
+			.form-control {
+				border-bottom-color: @color;
+		}
+		}
+	}
+
+}
+
+
+// Datetimepicker
+// ==============
+
+// Fix some weird bug with buttons misalignment
+
+.btn[data-action="decrementHours"], .btn[data-action="decrementMinutes"],
+.btn[data-action="incrementHours"], .btn[data-action="incrementMinutes"] {
+	box-shadow: none;
+}

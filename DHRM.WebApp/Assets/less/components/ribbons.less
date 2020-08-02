@@ -1,0 +1,116 @@
+// =======
+// Ribbons
+// =======
+
+.ribbon {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 60px 20px 20px 20px;
+	background-color: @grey-lighter;;
+	box-shadow: 0 1px 3px fade(black,6%), 0 1px 2px fade(black,12%), 0 -1px -1px 1px fade(black,100%);
+
+	// Title
+
+	&__title {
+		position: absolute;
+		padding: @padding-base-vertical @padding-base-horizontal;
+		background-color: @grey-light;
+		top: 13px; left: -3px;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: white;
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			width: 0; height: 0;
+		}
+		&:before {
+			top: 0;
+			border-left: 8px solid @grey-light;
+			border-right: 0 solid @grey-light;
+			border-bottom: 17px solid transparent;
+		}
+		&:after {
+			bottom: 0;
+			border-left: 8px solid @grey-light;
+			border-right: 0 solid @grey-light;
+			border-top: 17px solid transparent;
+		}
+	}
+
+	// Contextual classes
+
+	.ribbon-color(@color) {
+
+		.ribbon__title {
+			background-color: @color;
+
+			&:before, &:after {
+				border-left-color: @color;
+				border-right-color: @color;
+			}
+		}
+	}
+
+	&_primary {
+		.ribbon-color(@brand-primary);
+	}
+	&_accent {
+		.ribbon-color(@brand-accent);
+	}
+	&_success {
+		.ribbon-color(@brand-success);
+	}
+	&_warning {
+		.ribbon-color(@brand-warning);
+	}
+	&_info {
+		.ribbon-color(@brand-info);
+	}
+	&_danger {
+		.ribbon-color(@brand-danger);
+	}
+
+
+	// Positioning
+
+	&_right {
+
+		.ribbon__title {
+			left: auto; right: -3px;
+
+			&:before, &:after {
+				right: 100%; left: auto;
+				border-left-width: 0;
+				border-right-width: 8px;
+			}
+		}
+	}
+
+	&_top {
+
+		.ribbon__title {
+			top: -3px; left: 20px;
+			padding-left: 13px;
+			padding-right: 13px;
+
+			&:before, &:after {
+				top: 100%;
+				border-top-width: 0;
+				border-bottom-width: 8px;
+			}
+			&:before {
+				left: 0;
+				border-left-width: 19px;
+				border-style: solid;
+			}
+			&:before {
+				left: 0;
+				border-right-width: 19px;
+				border-style: solid;
+			}
+		}
+	}
+}

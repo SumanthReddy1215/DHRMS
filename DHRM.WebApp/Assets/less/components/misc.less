@@ -1,0 +1,61 @@
+/**
+ * Miscellaneous
+ */
+
+.icon-square(@size) {
+	width: @size;
+	height: @size;
+	line-height: @size;
+	text-align: center;
+}
+.icon-circle(@size) {
+	.icon-square(@size);
+	border-radius: 50%;
+}
+
+
+// Animations
+// ==========
+
+// Click animation
+
+.click-animation {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%; left: 50%;
+		height: 0; width: 100%;
+		min-width: 150px; min-height: 150px;
+		padding-bottom: 100%;
+		border-radius: 50%;
+		background-color: fade(black,5%);
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+		animation: none;
+	}
+
+	&:focus:not(:active){
+
+		&:after {
+			animation: click-animation .5s linear;
+			animation-fill-mode: backwards;
+		}
+	}
+}
+
+@keyframes click-animation {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(.5);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}

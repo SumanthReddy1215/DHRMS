@@ -1,0 +1,55 @@
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.dll.config
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\AutoMapper.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.BusinessEntity.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.BusinessEntity.pdb
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\AutoMapper.xml
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.xml
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.csprojResolveAssemblyReference.cache
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.dll
+D:\sartaj\Devaki web\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.dll.config
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\AutoMapper.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.BusinessEntity.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.BusinessEntity.pdb
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\AutoMapper.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.csprojResolveAssemblyReference.cache
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.dll
+I:\Devaki\DHRM\Development\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.dll.config
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.DataAccess.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\AutoMapper.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.BusinessEntity.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\DHRM.BusinessEntity.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\AutoMapper.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.csprojAssemblyReference.cache
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.csproj.CoreCompileInputs.cache
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.csproj.CopyComplete
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\obj\Debug\DHRM.DataAccess.pdb
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.Mvc.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.Razor.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.WebPages.Razor.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.WebPages.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.Mvc.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.Razor.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.WebPages.Razor.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.WebPages.xml
+F:\DHRMS\DHRM_SYSTEM 25-07-2020\DHRM_SYSTEM\DHRM.DataAccess\bin\Debug\System.Web.WebPages.Deployment.xml

@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @if (ViewBag.Title != null)
+    {
+        <title>@ViewBag.Title</title>
+    }
+    else
+    {
+        <title>:: D-HRMS ::</title>
+    }
+    <!-- Css -->
+
+    <link rel="stylesheet" href="~/Assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Assets/plugins/perfect-scrollbar/css/perfect-scrollbar.min.css">
+    <link href="~/Content/Css/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    @*<link href="~/Assets/bootstrap/css/bootstrap.css" rel="stylesheet" />*@
+    @*<link href="~/Assets/css/theme.css" rel="stylesheet" />*@
+    <link href="~/Assets/css/theme_blue.css" rel="stylesheet" />
+    <link href="~/Content/MvcGrid/mvc-grid.css" rel="stylesheet" />
+    <link href="~/Content/Css/app.css" rel="stylesheet" />
+    <link href="~/Content/Css/loading.css" rel="stylesheet" />
+    <link href="~/Content/Css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="~/Content/Css/bootstrap-dialog.min.css" rel="stylesheet" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/Content/Js/moment-with-locales.js"></script>
+    <script src="~/Content/Js/bootstrap-datetimepicker.js"></script>
+    <script src="~/assets/plugins/parsley/parsley.js"></script>
+    <script src="~/Content/Js/MvcGrid/mvc-grid.js"></script>
+
+    <script src="~/Content/Js/inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="~/Content/Js/inputmask/phone-codes/phone.js"></script>
+    @*<script src="~/Content/Js/inputmask/inputmask.date.extensions.js"></script>*@
+
+    <script src="~/Content/Js/app.js"></script>
+    <script src="~/Content/Js/ajaxHttpService.js"></script>
+    <script src="~/Content/Js/bootstrap-multiselect.js"></script>
+    <script src="~/Content/Js/bootstrap-dialog.min.js"></script>
+
+    <script src="~/Content/Js/parsleyEx/parsleyEx.js"></script>
+    <script src="~/Content/Js/bootstrap3-typeahead.min.js"></script>
+    <script src="~/Content/Js/data.json.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <!-- Top Menu  Begin -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbar_main">
+
+                <!-- Navbar: Brand -->
+                <a class="navbar-brand" href="#">
+                    D-HRMS
+                </a>
+
+                <!-- Navbar: Toggle menu -->
+                <a href="#" class="navbar-btn navbar-left" id="sidebar__toggle">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <!-- Navbar: Search form -->
+                <form class="navbar-form navbar-left hidden-xs" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-link">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Navbar: Sign out -->
+                <a href="@Url.Action("Index","Home")" class="navbar-btn navbar-right btn btn-accent">
+                    Sign Out
+                </a>
+
+                <!-- Navbar: Links -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-notification"></span>
+                            <span class="hidden-xs">Messages</span> <i class="fa fa-envelope visible-xs-inline-block"></i>
+                        </a>
+                        <div class="dropdown-menu navbar-messages">
+                            <a href="#" class="navbar-messages__item">
+                                <div class="navbar-messages__avatar">
+                                    <img src="~/Assets/img/user_2.jpg" alt="...">
+                                </div>
+                                <div class="navbar-messages__body">
+                                    <h5 class="navbar-messages__sender">
+                                        Jane Roe
+                                        <small>2 hours ago</small>
+                                    </h5>
+                                    <p class="navbar-messages__content">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="navbar-messages__item">
+                                <div class="navbar-messages__avatar">
+                                    <img src="~/Content/ProfilePictures/1.jpg" alt="...">
+                                </div>
+                                <div class="navbar-messages__body">
+                                    <h5 class="navbar-messages__sender">
+                                        John Doe
+                                        <small>1 day ago</small>
+                                    </h5>
+                                    <p class="navbar-messages__content">
+                                        Reprehenderit consequatur minima non nostrum aliquid, excepturi...
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="navbar-messages__item">
+                                <div class="navbar-messages__avatar">
+                                    <img src="~/Assets/img/user_4.jpg" alt="...">
+                                </div>
+                                <div class="navbar-messages__body">
+                                    <h5 class="navbar-messages__sender">
+                                        Mary Major
+                                        <small>1 day ago</small>
+                                    </h5>
+                                    <p class="navbar-messages__content">
+                                        Ipsa quaerat labore blanditiis consequuntur, rerum minima, aut...
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="navbar-messages__view-all">
+                                View All
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-notification hidden"></span>
+                            <span class="hidden-xs">Alerts</span> <i class="fa fa-bell visible-xs-inline-block"></i>
+                        </a>
+                        <div class="dropdown-menu navbar-alerts">
+                            <a href="#" class="navbar-alerts__item">
+                                <span class="label label-success">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                New user registered
+                                <small>3 mins ago</small>
+                            </a>
+                            <a href="#" class="navbar-alerts__item">
+                                <span class="label label-danger">
+                                    <i class="fa fa-bolt"></i>
+                                </span>
+                                Server overloaded
+                                <small>2 hours ago</small>
+                            </a>
+                            <a href="#" class="navbar-alerts__item">
+                                <span class="label label-warning">
+                                    <i class="fa fa-bell"></i>
+                                </span>
+                                Server not responding
+                                <small>3 hours ago</small>
+                            </a>
+                            <a href="#" class="navbar-alerts__item">
+                                <span class="label label-success">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                New user registered
+                                <small>5 hours ago</small>
+                            </a>
+                            <a href="#" class="navbar-alerts__item">
+                                <span class="label label-danger">
+                                    <i class="fa fa-bolt"></i>
+                                </span>
+                                Database error
+                                <small>12 days ago</small>
+                            </a>
+                            <a href="#" class="navbar-alerts__view-all">
+                                View All
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Top Menu End -->
+
+    <div class="wrapper">
+        <!-- Side Menu -->
+        <div class="sidebar">
+
+            <!-- Sidebar: Close button (mobile devices) -->
+            <div class="sidebar__close">
+                <img src="~/Assets/img/icons/icon_close.svg" alt="Close sidebar">
+            </div>
+
+            <!-- Sidebar: User -->
+            @Html.Partial("_SidebarUserNavigation")
+            <!-- Sidebar: User End -->
+            <!-- Sidebar: Nav -->
+            @Html.Partial("_LeftMenu")
+
+
+        </div>
+        <!-- Side Menu End -->
+        <!-- Main Content -->
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+        <!-- Main Content End -->
+        <div>
+            <br />
+            <br />
+        </div>
+    </div>
+
+    <script src="~/assets/js/theme.js"></script>
+    <!--build:js assets/js/kite.min.js -->
+    @*<script src="~/assets/js/kite.js"></script>*@
+    <!-- endbuild -->
+    <script src="~/Assets/js/custom.js"></script>
+    <script type="text/javascript">
+        var $mvcGrid;
+        $(function () {
+            $("#sidebar__nav a").removeClass("active");
+            var activeMenu = $($("[active-menu]").attr("active-menu"));
+            activeMenu.addClass("active");
+
+            // has submenu
+            if (activeMenu.attr("data-toggle"))
+            {
+                activeMenu.attr("aria-expanded", "true").removeClass("collapsed");
+                activeMenu.parent().find("ul").attr("aria-expanded", "true").addClass("in");
+            }
+
+            // active submenu
+            var subActiveMenu = $($("[active-menu]").attr("active-submenu"));
+            subActiveMenu.addClass("active");
+
+
+        });
+
+
+    </script>
+    <script type="text/javascript">
+        window.history.forward();
+        $(document).ready(function () {
+            function disableBack() { window.history.forward(); }
+
+            document.body.onload = disableBack();
+            document.body.onunload = function () { null };
+            document.body.onpageshow = function (evt) { if (evt.persisted) disableBack() }
+        });
+    </script>
+    <!-- loading -->
+    <div class="loading" id="_loading_" style="display:none;">Loading&#8230;</div>
+    @*<script src="~/Content/Js/jquery-1.10.0.intellisense.js"></script>*@
+</body>
+</html>

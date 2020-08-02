@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+
+            <!-- Sign In -->
+            <div class="sign__container">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            Sign In to your account
+                        </h4>
+                    </div> <!-- / .panel-heading -->
+
+                    <div class="panel-body">
+                        <form method="post" data-parsley-validate>
+                            <div class="form-group">
+                                <label for="username">Your Username<em>*</em></label>
+                                <input autofocus type="text" class="form-control" id="username" name="username" required="" data-parsley-error-message="Please enter Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Your password<em>*</em></label>
+                                <input type="password" class="form-control" id="password" name="password" required="" data-parsley-error-message="Please enter Password">
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">
+                                    Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary btnload">
+                                Sign In
+                            </button>
+                            <label style="color:red;text-align:center;width:100%">@ViewData["_errorMsg_"]</label>
+                        </form>
+                    </div> <!-- / .panel-body -->
+
+                    <div class="panel-footer">
+                        <a href="#" data-toggle="collapse" data-target="#sign__resend-password">Forgot your password?</a>
+                        <div class="collapse" id="sign__resend-password">
+                            <form class="form-inline" data-parsley-validate novalidate>
+                                <div class="form-group">
+                                    <label class="sr-only">Enter your e-mail</label>
+                                    <input type="email" class="form-control" placeholder="Enter your e-mail">
+                                </div>
+                                <button type="submit" class="btn btn-link">
+                                    Resend
+                                </button>
+                            </form>
+                        </div>
+                    </div> <!-- / .panel-footer -->
+
+                </div> <!-- / .panel -->
+               
+            </div> <!-- / .sign__conteiner -->
+
+        </div>
+    </div>
+</div>
